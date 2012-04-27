@@ -1,0 +1,26 @@
+<%= render "spree/shared/products_homepage", :products => @products, :taxon => @taxon %>
+
+<%
+  products = @products
+%>
+
+<div id="banner-slideshow">
+    <% products.each do |product| %>
+      <% if product.feature_product == true && (Spree::Config[:show_zero_stock_products] || product.has_stock?) %>
+          <div class="banner">
+            <div class="tagline"></div>
+            <%= link_to small_image(product, :itemprop => "name"), product %>
+          </div>
+       <% end %>
+    <% end %>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+$(document).ready(function() {
+    $('#banner-slideshow').cycle({
+		fx: 'scrollRight', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		speed: 2000,
+		timeout: 2000
+	});
+});
+</script>
