@@ -1,26 +1,24 @@
-<%= render "spree/shared/products_homepage", :products => @products, :taxon => @taxon %>
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render :partial => 'spree/shared/taxonomies' %>
+  </div>
+<% end %>
 
-<%
-  products = @products
-%>
+<% if params[:keywords] %>
 
-<div id="banner-slideshow">
-    <% products.each do |product| %>
-      <% if product.feature_product == true && (Spree::Config[:show_zero_stock_products] || product.has_stock?) %>
-          <div class="banner">
-            <div class="tagline"></div>
-            <%= link_to small_image(product, :itemprop => "name"), product %>
-          </div>
-       <% end %>
+  <div data-hook="search_results">
+    <% if @products.empty? %>
+      <h6 class="search-results-title"><%= t(:no_products_found) %></h6>
+    <% else %>
+      <%= render :partial => 'spree/shared/products_homepage', :locals => { :products => @products, :taxon => @taxon } %>
     <% end %>
-</div>
+  </div>
 
-<script type="text/javascript" charset="utf-8">
-$(document).ready(function() {
-    $('#banner-slideshow').cycle({
-		fx: 'scrollRight', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-		speed: 2000,
-		timeout: 2000
-	});
-});
-</script>
+<% else %>
+
+  <div data-hook="homepage_products">
+    <%= render :partial => 'spree/shared/products_homepage', :locals => { :products => @products, :taxon => @taxon } %>
+  </div>
+<% end %>
+
+
