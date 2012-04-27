@@ -1,4 +1,4 @@
-module SpreeSam
+module SpreeLilyandmax
   class Engine < Rails::Engine
     engine_name 'spree_lilyandmax_homepage'
 

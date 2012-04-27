@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     spree_lilyandmax_homepage (1.0.0)
-      formtastic
       spree_core (~> 1.0.0)
 
 GEM
@@ -74,8 +73,6 @@ GEM
       activesupport (>= 3.0.0)
     ffaker (1.12.1)
     ffi (1.0.11)
-    formtastic (2.2.0)
-      actionpack (>= 3.0)
     highline (1.6.8)
     hike (1.2.1)
     i18n (0.6.0)
@@ -211,7 +208,6 @@ DEPENDENCIES
   capybara (= 1.0.1)
   factory_girl
   ffaker
-  rails (= 3.1.4)
   rspec-rails (~> 2.7)
   ruby-debug19
   spree_cmd

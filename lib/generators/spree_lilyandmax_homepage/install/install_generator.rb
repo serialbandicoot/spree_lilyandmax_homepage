@@ -1,4 +1,4 @@
-module SpreeSam
+module SpreeLilyandmax
   module Generators
     class InstallGenerator < Rails::Generators::Base
 
