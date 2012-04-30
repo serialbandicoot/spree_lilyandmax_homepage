@@ -1,5 +1,6 @@
 <%
   products = @products
+  feature_content = Spree::Feature::Config[:feature_content].dup
 %>
 
 <% if products.map(&:feature_product).include? true  %>
@@ -7,7 +8,7 @@
     <div id="banner-slideshow-left">
       <h6>Featured Products</h6>
       <br/>
-      This is a product thingy and hopefully it will wrap around and look a lot better
+      <%= simple_format(feature_content) %>
     </div>
     <div id="banner-slideshow">
         <% products.each do |product| %>

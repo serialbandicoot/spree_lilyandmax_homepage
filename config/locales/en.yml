@@ -16,4 +16,7 @@ en:
   reorder_explain: Drag the banners up and down to adjust the order in which they are displayed
   visible: Visible
   drag: drag
-
+  feature:
+    feature_settings: "Feature Settings"
+    feature_settings_description: "Amend the settings description"
+    feature_description: "Feature description"

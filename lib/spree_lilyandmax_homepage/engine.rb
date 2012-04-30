@@ -1,8 +1,15 @@
+module Spree::Feature
+end
+
 module SpreeLilyandmaxHomepage
   class Engine < Rails::Engine
     engine_name 'spree_lilyandmax_homepage'
 
     config.autoload_paths += %W(#{config.root}/lib)
+
+    initializer "spree.feature_configuration.preferences", :after => "spree.environment" do |app|
+      Spree::Feature::Config = Spree::FeatureConfiguration.new
+    end
 
     # use rspec for tests
     config.generators do |g|

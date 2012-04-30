@@ -1,3 +1,7 @@
-Spree::Core::Engine.routes.append do
-  # Add your extension routes here
+Spree::Core::Engine.routes.prepend do
+
+  namespace :admin do
+    resource :feature_settings
+  end
+
 end
