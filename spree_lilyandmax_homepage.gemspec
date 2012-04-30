@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_lilyandmax_homepage'
   s.version     = '1.0.0'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Homepage featured product and show on homepage'
+  s.description = 'Set up the homepage featured product and product to show on homepage'
   s.required_ruby_version = '>= 1.8.7'
 
   s.author            = 'Sam T'
