@@ -1,5 +1,9 @@
-<% if Spree::Slide.published.count > 0 %>
-    <% type = "_with_slide" %>
+<!-- Test to see if there is a news ticker and/or slider -->
+<% news_ticks = Spree::Tick.all %>
+<% if news_ticks.map(&:published).include?(true) && Spree::Slide.published.count > 0 %>
+    <% type = "_with_slide_and_ticker" %>
+<% elsif Spree::Slide.published.count > 0 %>
+    <% type = "_with_slide_no_ticker" %>
 <% else %>
     <% type = "_no_slide" %>
 <% end %>
@@ -15,5 +19,8 @@
       Baking Party Cakes
       <br/>
       Party Games
+      <br/>
   </div>
 </div>
+
+
