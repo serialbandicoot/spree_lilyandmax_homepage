@@ -44,7 +44,7 @@
 	height: 180px;
 }
 
-#food_ideas_border_with_slide_and_ticker {
+#cupcake_decorations_border_with_slide_and_ticker {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -53,11 +53,11 @@
   top:78px;
   right:25px;
   width:140px;
-  height: 201px;
+  height: 281px;
   padding: 10px;
 }
 
-#food_ideas_border_no_slide {
+#cupcake_decorations_border_no_slide {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -73,7 +73,7 @@
 }
 
 
-#food_ideas_border_with_slide_no_ticker {
+#cupcake_decorations_border_with_slide_no_ticker {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -84,4 +84,8 @@
   width:140px;
   height: 201px;
   padding: 10px;
+}
+
+#cupcake_decoration_text {
+    text-align:justify;
 }
