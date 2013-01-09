@@ -13,7 +13,7 @@
     </div>
     <div id="banner-slideshow">
         <% products.each do |product| %>
-          <% if product.feature_product == true && (Spree::Config[:show_zero_stock_products] || product.has_stock?) %>
+          <% if product.feature_product == true && (Spree::Config[:show_zero_stock_products] || product.has_stock?) && !product.deleted_at %>
               <div class="banner">
                 <div class="tagline"></div>
                 <%= link_to small_image(product, :itemprop => "name"), product %>
